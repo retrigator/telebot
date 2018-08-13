@@ -79,10 +79,10 @@ def handle(msg):
             options.add_argument('--headless')
             options.add_argument('--no-sandbox')
             options.add_argument('--disable-setuid-sandbox')
-            options.binary_location = '/app/heroku-buildpack-google-chrome/bin/compile'
+            options.binary_location = '/app/chrome'
             # get chromedriver from 
             # https://sites.google.com/a/chromium.org/chromedriver/downloads
-            browser = webdriver.Chrome(chrome_options=options, executable_path='/app/heroku-buildpack-chromedriver/bin/compile')
+            browser = webdriver.Chrome(chrome_options=options, executable_path='/app/driver')
             al=("Launching... it may take upto 20 seconds")
             bot.sendMessage(chat_id,al)
             driver.get('https://www.eviebot.com/en/')
